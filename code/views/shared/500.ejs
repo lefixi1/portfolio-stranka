@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include("includes/head.ejs") %>
+    <link rel="stylesheet" href="/css/Errors.css" />
+    <title>500</title>
+  </head>
+  <body>
+    <header><%- include("includes/header.ejs") %></header>
+
+    <main>
+      <hr
+        style="
+          height: 1.5px;
+          color: #8b0000;
+          background-color: #8b0000;
+          opacity: 100%;
+          margin: 3rem 3rem 0;
+        "
+      />
+      <section class="error-container">
+        <h1>Vyskytla chyba</h1>
+        <p class="info">Pracujeme nad tym, aby opraviť to čo najskôr</p>
+      </section>
+      <hr
+        style="
+          height: 1.5px;
+          color: #8b0000;
+          background-color: #8b0000;
+          opacity: 100%;
+          margin: 0 3rem;
+        "
+      />
+    </main>
+
+    <%- include("../includes/contact-option.ejs") %>
+
+    <footer><%- include("includes/footer.ejs") %></footer>
+  </body>
+</html>

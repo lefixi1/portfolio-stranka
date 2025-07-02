@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include("includes/head.ejs") %>
+    <link rel="stylesheet" href="/css/Errors.css" />
+    <title>401</title>
+  </head>
+  <body>
+    <header><%- include("includes/header.ejs") %></header>
+
+    <main>
+      <hr
+        style="
+          height: 1.5px;
+          color: #8b0000;
+          background-color: #8b0000;
+          opacity: 100%;
+          margin: 3rem 3rem 0;
+        "
+      />
+      <section class="error-container">
+        <h1>Not authenticated!</h1>
+        <div class="text">
+          <p class="info">
+            You are not authenticated and therefore not allowed to access this
+            page. Go to
+          </p>
+          <p class="link"><a href="/login"> Login page</a></p>
+        </div>
+      </section>
+      <hr
+        style="
+          height: 1.5px;
+          color: #8b0000;
+          background-color: #8b0000;
+          opacity: 100%;
+          margin: 0 3rem;
+        "
+      />
+    </main>
+
+    <%- include("../includes/contact-option.ejs") %>
+
+    <footer><%- include("includes/footer.ejs") %></footer>
+  </body>
+</html>
