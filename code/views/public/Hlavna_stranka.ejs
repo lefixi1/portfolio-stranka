@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include("../includes/head.ejs") %>
+    <title>Fligh - Main</title>
+    <link rel="stylesheet" href="css/Hlavna stranka.css" />
+  </head>
+  <body>
+    <header><%- include("../includes/header.ejs") %></header>
+
+    <main>
+      <%- include("../includes/carousel.ejs") %>
+
+      <hr
+        style="
+          height: 1.5px;
+          color: #8b0000;
+          background-color: #8b0000;
+          opacity: 100%;
+          margin: 0 3rem;
+        "
+      />
+
+      <section class="destinations">
+        <h2>Our offer of countries</h2>
+        <div class="destination-cards-upper">
+          <% countries.forEach(country => { %> <% if (country.count_id===1 ||
+          country.count_id === 2) { %>
+          <div class="card mb-3 card<%=country.count_id%>">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img
+                  src="/images/<%=country.imageLocation%>"
+                  class="img-fluid rounded-start"
+                  alt="Country"
+                />
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title"><%=country.count_name%></h5>
+                  <p class="card-text"><%=country.count_descr%></p>
+                  <a href="/Countries/<%=country.count_name%>" class="btn-opt">
+                    See options
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <% } %> <% }); %>
+        </div>
+
+        <div class="destination-cards-lower">
+          <% countries.forEach(country => { %> <% if (country.count_id===3 ||
+          country.count_id === 4) { %>
+          <div class="card mb-3 card<%=country.count_id%>">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img
+                  src="/images/<%=country.imageLocation%>"
+                  class="img-fluid rounded-start"
+                  alt="Country"
+                />
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title"><%=country.count_name%></h5>
+                  <p class="card-text"><%=country.count_descr%></p>
+                  <a href="/Countries/<%=country.count_name%>" class="btn-opt">
+                    See options
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <% } %> <% }); %>
+        </div>
+
+        <a href="/Countries" class="btn">More</a>
+      </section>
+      <hr
+        style="
+          height: 1.5px;
+          color: #8b0000;
+          background-color: #8b0000;
+          opacity: 100%;
+          margin: 0 3rem;
+        "
+      />
+      <section class="faq">
+        <h2 class="napis" style="text-align: center; color: #4f1515">FAQ</h2>
+        <div class="faq-accordion" id="faqAccordion">
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button">
+                <span class="question-text">Can i check in online?</span>
+                <span class="accordion-icon">▼</span>
+              </button>
+            </h3>
+            <div class="accordion-content">
+              <div class="accordion-body">
+                Yes, online check-in is available for all Fligh customers who
+                are travelling on Fligh flights - these are the ones with flight
+                numbers beginning TOM.
+              </div>
+            </div>
+          </div>
+          <hr />
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button">
+                <span class="question-text"
+                  >How do i cancel my excursion booking?</span
+                >
+                <span class="accordion-icon">▼</span>
+              </button>
+            </h3>
+            <div class="accordion-content">
+              <div class="accordion-body">
+                If you booked your excursion online and your excursion reference
+                number starts with EXC, please contact our Excursions Team to
+                cancel your booking. If your excursion reference number is made
+                up of numbers only, you can cancel it yourself online using the
+                My Booking option, as long as the excursion is outside 48 hours
+                away.
+              </div>
+            </div>
+          </div>
+          <hr />
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button">
+                <span class="question-text"
+                  >Will i have to pay any fees to cancel my holiday?</span
+                >
+                <span class="accordion-icon">▼</span>
+              </button>
+            </h3>
+            <div class="accordion-content">
+              <div class="accordion-body">
+                <ul>
+                  <li>70 days or more before travel: Loss of full deposit</li>
+                  <li>
+                    69 - 63 days before travel: 30% of total booking price
+                  </li>
+                  <li>
+                    62 - 49 days before travel: 50% of total booking price
+                  </li>
+                  <li>
+                    48 - 29 days before travel: 70% of total booking price
+                  </li>
+                  <li>
+                    28 - 15 days before travel: 90% of total booking price
+                  </li>
+                  <li>
+                    14 - 0 days before travel: 100% of total booking price
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <hr />
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button">
+                <span class="question-text"
+                  >Do i need to print my boarding pass if i check in online? </span
+                ><span class="accordion-icon">▼</span>
+              </button>
+            </h3>
+            <div class="accordion-content">
+              <div class="accordion-body">
+                Fligh, Air Europa, Albastar, ASL Airlines France, ASL Airlines
+                Ireland, Evelop Airlines, Germania, Norwegian, Travel Service
+                and Volotea flightsYes, you'll need to print each boarding pass
+                clearly on an individual piece of A4 paper. The barcode on the
+                pass will need to be scanned at the airport, so the page mustn't
+                have any rips or tears. Your boarding pass is an official
+                security document, so you'll need to keep it safe until you
+                reach your destination. Just so you know, we can't accept any
+                unclear, faded or blurry boarding passes.If you can't print your
+                boarding passes, you can collect them from the Fligh bag drop
+                desk when you arrive at the airport.
+              </div>
+            </div>
+          </div>
+          <hr />
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button">
+                <span class="question-text"
+                  >Can Fligh guarantee that my access requirements will be
+                  fulfilled?</span
+                ><span class="accordion-icon">▼</span>
+              </button>
+            </h3>
+            <div class="accordion-content">
+              <div class="accordion-body">
+                Fligh's ability to provide customers with precise accessibility
+                information and confirmation of services is entirely dependent
+                upon notification of access needs by the customer. This must be
+                done before booking, or as soon as possible after you have
+                booked.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <hr
+        style="
+          height: 1.5px;
+          color: #8b0000;
+          background-color: #8b0000;
+          opacity: 100%;
+          margin: 0 3rem;
+        "
+      />
+    </main>
+
+    <%- include("../includes/contact-option.ejs") %>
+
+    <footer><%- include("../includes/footer.ejs") %></footer>
+    <script src="js/Hlavna stranka.js" defer></script>
+  </body>
+</html>

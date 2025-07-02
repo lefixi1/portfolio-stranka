@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include("../includes/head.ejs") %>
+    <title>Login</title>
+    <link rel="stylesheet" href="css/Log-Sig.css" />
+  </head>
+  <body>
+    <header><%- include("../includes/header.ejs") %></header>
+
+    <main>
+      <hr
+        style="
+          height: 1.5px;
+          color: #8b0000;
+          background-color: #8b0000;
+          opacity: 100%;
+          margin: 3rem 3rem 0;
+        "
+      />
+      <section class="formular">
+        <h2>Login</h2>
+        <hr
+          style="
+            height: 1.5px;
+            color: #8b0000;
+            background-color: #8b0000;
+            opacity: 100%;
+            margin: 0 3rem;
+          "
+        />
+
+        <div class="redir">
+          <a href="/Sign-up" class="redir-btn">Create account</a>
+        </div>
+
+        <section class="auth-section">
+          <form action="login" method="post">
+            <div class="form-body">
+              <% if(inputData.errorMessage){ %>
+              <p class="error-message"><%= inputData.errorMessage %></p>
+              <% } %>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Email"
+                value="<%= inputData.email %>"
+                required
+              />
+              <input
+                type="password"
+                name="password"
+                id="password"
+                placeholder="Password"
+                value="<%= inputData.password %>"
+                required
+              />
+            </div>
+            <div style="margin-top: 2rem">
+              <button
+                class="send-button"
+                type="submit"
+                style="border-radius: 0.25rem"
+              >
+                Login
+              </button>
+            </div>
+          </form>
+        </section>
+      </section>
+      <hr
+        style="
+          height: 1.5px;
+          color: #8b0000;
+          background-color: #8b0000;
+          opacity: 100%;
+          margin: 3rem 3rem 0;
+        "
+      />
+    </main>
+
+    <%- include("../includes/contact-option.ejs") %>
+
+    <footer><%- include("../includes/footer.ejs") %></footer>
+  </body>
+</html>
