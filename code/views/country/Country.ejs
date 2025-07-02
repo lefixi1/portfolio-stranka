@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include("../includes/head.ejs") %>
+    <title><%= country.count_name %></title>
+    <link rel="stylesheet" href="/css/Country.css" />
+  </head>
+  <body data-country-name="<%= country.count_name %>">
+    <header><%- include("../includes/header.ejs") %></header>
+
+    <main>
+      <%- include("../includes/carousel.ejs") %>
+
+      <hr
+        style="
+          height: 1.5px;
+          color: #8b0000;
+          background-color: #8b0000;
+          opacity: 100%;
+          margin: 0 3rem;
+        "
+      />
+
+      <section class="country-description">
+        <h2><%= country.count_name %></h2>
+        <div class="description">
+          <p><%= country.count_descr_long %></p>
+        </div>
+
+        <div class="countries">
+          <div class="redirect-btns">
+            <a href="/Countries" class="countries-btn"
+              ><img src="/icons/worldwide icon.png" alt="redirect"
+            /></a>
+            <a href="/Countries" class="countries-btn">Countries</a>
+          </div>
+        </div>
+      </section>
+
+      <hr
+        style="
+          height: 1.5px;
+          color: #8b0000;
+          background-color: #8b0000;
+          opacity: 100%;
+          margin: 0 3rem;
+        "
+      />
+
+      <section class="destinations">
+        <div class="add-trip">
+          <% if(locals.isAdmin) { %>
+          <a href="/Create-trip" class="buto">Create new trip</a>
+          <% } %>
+        </div>
+        <p class="trip-amount">We have <%= numberOfTrips %> trips for you</p>
+        <form
+          id="order-form"
+          action="/Countries/<%= country.count_name %>"
+          method="get"
+        >
+          <input
+            type="hidden"
+            name="order"
+            id="order"
+            value="<%= nextOrder %>"
+            name="order"
+          />
+          <% if(parseInt(numberOfTrips)!=0) {%>
+          <button id="btn-order" class="bth">Change order</button>
+          <% } %>
+        </form>
+        <div class="card-container">
+          <% for(const t of trips) { %> <%- include("includes/trip-item",{t,
+          country}) %> <% } %>
+        </div>
+      </section>
+
+      <%- include("../includes/confirmDialog.ejs") %>
+
+      <hr
+        style="
+          height: 1.5px;
+          color: #8b0000;
+          background-color: #8b0000;
+          opacity: 100%;
+          margin: 0 3rem;
+        "
+      />
+    </main>
+
+    <%- include("../includes/contact-option.ejs") %>
+
+    <footer><%- include("../includes/footer.ejs") %></footer>
+
+    <script src="/scripts/trips.js" defer></script>
+    <script src="/scripts/deleteButton.js" defer></script>
+  </body>
+</html>

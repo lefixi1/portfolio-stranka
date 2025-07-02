@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include("../includes/head.ejs") %>
+    <title>Countries</title>
+    <link rel="stylesheet" href="css/Countries.css" />
+  </head>
+  <body>
+    <header><%- include("../includes/header.ejs") %></header>
+
+    <main>
+      <%- include("../includes/carousel.ejs") %>
+
+      <hr
+        style="
+          height: 1.5px;
+          color: #8b0000;
+          background-color: #8b0000;
+          opacity: 100%;
+          margin: 0 3rem;
+        "
+      />
+
+      <section class="destinations">
+        <h2>Countries</h2>
+        <div class="add-country">
+          <% if(locals.isAdmin) { %>
+          <a href="/admin/Add-country" class="buto">Add new country</a>
+
+          <% } %>
+        </div>
+        <div class="dest-count">
+          <% for(const c of countries) { %> <%- include("includes/country-item",
+          {c:c}) %> <% } %>
+        </div>
+      </section>
+
+      <%- include("../includes/confirmDialog.ejs") %>
+
+      <hr
+        style="
+          height: 1.5px;
+          color: #8b0000;
+          background-color: #8b0000;
+          opacity: 100%;
+          margin: 0 3rem;
+        "
+      />
+    </main>
+
+    <%- include("../includes/contact-option.ejs") %>
+
+    <footer><%- include("../includes/footer.ejs") %></footer>
+    <script src="/scripts/deleteButton.js" defer></script>
+  </body>
+</html>
