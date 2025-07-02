@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include("../includes/head.ejs") %>
+    <title>Add country</title>
+    <link rel="stylesheet" href="/css/Admin.css" />
+  </head>
+  <body>
+    <header><%- include("../includes/header.ejs") %></header>
+
+    <main>
+      <hr
+        style="
+          height: 1.5px;
+          color: #8b0000;
+          background-color: #8b0000;
+          opacity: 100%;
+          margin: 3rem 3rem 0;
+        "
+      />
+      <section class="formular">
+        <h2>New country</h2>
+        <hr
+          style="
+            height: 1.5px;
+            color: #8b0000;
+            background-color: #8b0000;
+            opacity: 100%;
+            margin: 0 3rem;
+          "
+        />
+        <div class="countries">
+          <div class="redirect-btns">
+            <a href="/Countries" class="countries-btn"
+              ><img src="/icons/redirect-btn.png" alt="redirect"
+            /></a>
+            <a href="/Countries" class="countries-btn">Countries</a>
+          </div>
+        </div>
+
+        <form
+          action="/admin/Add-country"
+          method="POST"
+          enctype="multipart/form-data"
+        >
+          <div class="form-body">
+            <% if(inputData.errorMessage){ %>
+            <p class="error-message"><%= inputData.errorMessage %></p>
+            <% } %>
+
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Name"
+              required
+            />
+            <input
+              type="text"
+              name="description"
+              id="description"
+              placeholder="Description"
+              required
+            />
+            <input
+              type="text"
+              name="short_description"
+              id="short_description"
+              placeholder="Short description"
+            />
+
+            <input
+              type="file"
+              accept="image/*"
+              id="image"
+              name="image"
+              required
+            />
+          </div>
+          <div class="form-btn">
+            <button class="send-button" type="submit">Add</button>
+          </div>
+        </form>
+      </section>
+      <hr
+        style="
+          height: 1.5px;
+          color: #8b0000;
+          background-color: #8b0000;
+          opacity: 100%;
+          margin: 3rem 3rem;
+        "
+      />
+    </main>
+
+    <footer><%- include("../includes/footer.ejs") %></footer>
+  </body>
+</html>

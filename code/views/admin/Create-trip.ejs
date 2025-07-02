@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include("../includes/head.ejs") %>
+    <title>Create trip</title>
+    <link rel="stylesheet" href="/css/Admin.css" />
+  </head>
+  <body>
+    <header><%- include("../includes/header.ejs") %></header>
+
+    <main>
+      <hr
+        style="
+          height: 1.5px;
+          color: #8b0000;
+          background-color: #8b0000;
+          opacity: 100%;
+          margin: 3rem 3rem 0;
+        "
+      />
+      <section class="formular">
+        <h2>New trip</h2>
+        <hr
+          style="
+            height: 1.5px;
+            color: #8b0000;
+            background-color: #8b0000;
+            opacity: 100%;
+            margin: 0 3rem;
+          "
+        />
+
+        <form action="/Create-trip" method="POST" enctype="multipart/form-data">
+          <div class="form-body">
+            <% if(inputData.errorMessage){ %>
+            <p class="error-message"><%= inputData.errorMessage %></p>
+            <% } %>
+
+            <input
+              type="text"
+              name="tittle"
+              id="tittle"
+              placeholder="Tittle"
+              required
+            />
+            <input
+              type="text"
+              name="description"
+              id="description"
+              placeholder="Description"
+              required
+            />
+            <input
+              type="number"
+              name="amountP"
+              id="amountP"
+              placeholder="Amount of people"
+              min="1"
+              max="70"
+              required
+            />
+            <select name="country" required>
+              <option>Choose country</option>
+              <% for(const c of countries) {%>
+              <option value="<%= c.count_id %>"><%= c.count_name %></option>
+              <% } %>
+            </select>
+
+            <input type="text" name="city" placeholder="City" />
+            <input
+              type="date"
+              name="dateD"
+              id="dateD"
+              placeholder="Day of departure"
+              required
+            />
+            <input
+              type="date"
+              name="dateR"
+              id="dateR"
+              placeholder="Day of return"
+              required
+            />
+            <input
+              type="text"
+              name="typeR"
+              id="type"
+              placeholder="Type of room"
+              required
+            />
+            <input
+              type="text"
+              name="typeT"
+              placeholder="Type of trip"
+              required
+            />
+            <input
+              type="text"
+              name="price"
+              id="price"
+              placeholder="Price"
+              required
+            />
+            <input
+              type="text"
+              name="oldPrice"
+              id="old-price"
+              placeholder="Old price"
+            />
+            <input
+              type="file"
+              accept="image/*"
+              id="image"
+              name="image"
+              required
+            />
+          </div>
+          <div class="form-btn">
+            <button class="send-button" type="submit">Create</button>
+          </div>
+        </form>
+      </section>
+      <hr
+        style="
+          height: 1.5px;
+          color: #8b0000;
+          background-color: #8b0000;
+          opacity: 100%;
+          margin: 3rem 3rem;
+        "
+      />
+    </main>
+
+    <footer><%- include("../includes/footer.ejs") %></footer>
+  </body>
+</html>

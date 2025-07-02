@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include("../includes/head.ejs") %>
+    <title>Edit trip</title>
+    <link rel="stylesheet" href="/css/Admin.css" />
+  </head>
+  <body>
+    <header><%- include("../includes/header.ejs") %></header>
+
+    <main>
+      <hr
+        style="
+          height: 1.5px;
+          color: #8b0000;
+          background-color: #8b0000;
+          opacity: 100%;
+          margin: 3rem 3rem 0;
+        "
+      />
+      <section class="formular">
+        <h2>Edit trip: <%= trip.trip_tit %></h2>
+        <hr
+          style="
+            height: 1.5px;
+            color: #8b0000;
+            background-color: #8b0000;
+            opacity: 100%;
+            margin: 0 3rem;
+          "
+        />
+        <div class="trip-list">
+          <div class="redirect-btns">
+            <button
+              class="trip-list-btn"
+              type="button"
+              onclick="history.back()"
+            >
+              <img src="/icons/redirect-btn.png" alt="redirect" /> Go back
+            </button>
+          </div>
+        </div>
+        <form
+          action="/admin/Countries/<%= trip.count_name %>/<%= trip.trip_id %>/edit"
+          method="POST"
+          enctype="multipart/form-data"
+        >
+          <div class="form-body">
+            <% if(inputData.errorMessage){ %>
+            <p class="error-message"><%= inputData.errorMessage %></p>
+            <% } %>
+
+            <label for="description">Description:</label>
+            <input
+              type="text"
+              name="description"
+              id="description"
+              placeholder="Description"
+              value="<%= inputData.description %>"
+              required
+            />
+
+            <label for="amountP">Amount of people:</label>
+            <input
+              type="number"
+              name="amountP"
+              id="amountP"
+              placeholder="Amount of people"
+              min="1"
+              max="70"
+              value="<%= inputData.amountP %>"
+              required
+            />
+
+            <label for="dateD">Day of departure:</label>
+            <input
+              type="date"
+              name="dateD"
+              id="dateD"
+              placeholder="Day of departure"
+              value="<%= inputData.dateD %>"
+              required
+            />
+
+            <label for="dateR">Day of return:</label>
+            <input
+              type="date"
+              name="dateR"
+              id="dateR"
+              placeholder="Day of return"
+              value="<%= inputData.dateR %>"
+              required
+            />
+
+            <label for="typeR">Type of room:</label>
+            <input
+              type="text"
+              name="typeR"
+              id="type"
+              placeholder="Type of room"
+              value="<%= inputData.typeR %>"
+              required
+            />
+
+            <label for="typeT">Type of trip:</label>
+            <input
+              type="text"
+              name="typeT"
+              placeholder="Type of trip"
+              value="<%= inputData.typeT %>"
+              required
+            />
+
+            <label for="price">Price:</label>
+            <input
+              type="text"
+              name="price"
+              id="price"
+              placeholder="Price"
+              value="<%= inputData.price %>"
+              required
+            />
+
+            <label for="old-price">Old price:</label>
+            <input
+              type="text"
+              name="oldPrice"
+              id="old-price"
+              placeholder="Old price"
+              value="<%= inputData.oldPrice %>"
+            />
+
+            <% if (inputData.image) { %>
+            <label>Current image:</label><br />
+            <img
+              src="/images/<%= inputData.image %>"
+              alt="Trip Image"
+              style="max-width: 300px; height: auto"
+            />
+            <% } %>
+
+            <input type="hidden" name="image" value="<%= inputData.image %>" />
+
+            <label for="image" style="margin-top: 0.75rem"
+              >Upload new image:</label
+            >
+            <input type="file" name="image" id="image" accept="image/*" />
+          </div>
+          <div class="form-btn">
+            <button class="send-button" type="submit">Edit</button>
+          </div>
+        </form>
+      </section>
+      <hr
+        style="
+          height: 1.5px;
+          color: #8b0000;
+          background-color: #8b0000;
+          opacity: 100%;
+          margin: 3rem 3rem;
+        "
+      />
+    </main>
+
+    <footer><%- include("../includes/footer.ejs") %></footer>
+  </body>
+</html>
