@@ -1,0 +1,39 @@
+<div class="card mb-3 card1">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img
+        src="/images/<%= c.imageLocation %>"
+        class="img-fluid rounded-start"
+        alt="<%= c.count_name %>"
+      />
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title"><%= c.count_name %></h5>
+        <p class="card-text"><%= c.count_descr %></p>
+        <a href="/Countries/<%= c.count_name %>" class="btn-opt">See options</a>
+
+        <div class="admin-buttons">
+          <% if(locals.isAdmin) { %>
+          <a
+            href="/admin/Countries/<%= c.count_id %>/edit"
+            class="update-btn"
+            style="text-decoration: none; color: white"
+            ><img src="/icons/edit icon.png" alt="edit"
+          /></a>
+          <a
+            href="#"
+            class="delete-button"
+            data-type="country"
+            data-countryname="<%= c.count_name %>"
+            data-countid="<%= c.count_id %>"
+            style="text-decoration: none; color: white"
+          >
+            <img src="/icons/delete icon.png" alt="delete" />
+          </a>
+          <% } %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
