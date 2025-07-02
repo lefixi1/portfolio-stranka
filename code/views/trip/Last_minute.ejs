@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include("../includes/head.ejs") %>
+    <title>Last minute</title>
+    <link rel="stylesheet" href="/css/Last minute.css" />
+  </head>
+  <body>
+    <header><%- include("../includes/header.ejs") %></header>
+
+    <main>
+      <%- include("../includes/carousel.ejs") %>
+
+      <hr
+        style="
+          height: 1.5px;
+          color: #8b0000;
+          background-color: #8b0000;
+          opacity: 100%;
+          margin: 0 3rem;
+        "
+      />
+
+      <section class="destinations">
+        <h2>Last minute trips</h2>
+        <div class="card-container">
+          <% for(const t of trips) { %> <%- include("includes/trip-item",{t, })
+          %> <% } %>
+        </div>
+      </section>
+
+      <%- include("../includes/confirmDialog.ejs") %>
+
+      <hr
+        style="
+          height: 1.5px;
+          color: #8b0000;
+          background-color: #8b0000;
+          opacity: 100%;
+          margin: 2rem 3rem 1rem;
+        "
+      />
+    </main>
+
+    <%- include("../includes/contact-option.ejs") %>
+
+    <footer><%- include("../includes/footer.ejs") %></footer>
+    <script src="/scripts/deleteButton.js" defer></script>
+  </body>
+</html>

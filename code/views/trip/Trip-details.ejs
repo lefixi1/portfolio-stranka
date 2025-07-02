@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include("../includes/head.ejs") %>
+    <title><%= trip.trip_tit %></title>
+    <link rel="stylesheet" href="/css/Trip.css" />
+  </head>
+  <body data-trip-id="<%= trip.trip_id %>" data-country-name="<%= countryName %>" data-user-id="<%= locals.user ? locals.user.id : '' %>">
+    <header><%- include("../includes/header.ejs") %></header>
+
+    <main>
+
+    <%- include("../includes/carousel.ejs") %>
+
+    <hr
+      style="
+        height: 1.5px;
+        color: #8b0000;
+        background-color: #8b0000;
+        opacity: 100%;
+        margin: 0 3rem;
+      "
+    />
+
+    <section class="destination">
+          <div class="image-container">
+            <img src="/images/<%= trip.imageLocation %>" alt="Hotel Image" />
+            
+            <div class="trips">
+              <div class="redirect-btns">
+                <button class="trips-btn" type="button" onclick="history.back()"><img src="/icons/redirect-btn.png" alt="redirect" /> Trips
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="details-container">
+            <h3><%= trip.trip_tit %></h3>
+            <p class="location">In <%= trip.city %></p>
+            <div class="info">
+              <p>
+                <img
+                  src="/icons/icon calendar.png"
+                  alt="Calendar"
+                  width="20"
+                  height="20"
+                />
+                <%= trip.humanReadableDateDep %> - <%= trip.humanReadableDateRet %>
+              </p>
+              <p>
+                <img
+                  src="/icons/icon bed.png"
+                  alt="Hotel"
+                  width="20"
+                  height="20"
+                />
+                <%= trip.room_type %>
+              </p>
+              <p>
+                <img
+                  src="/icons/icon fork.png"
+                  alt="Meal"
+                  width="20"
+                  height="20"
+                />
+                <%= trip.trip_type %>
+              </p>
+            </div>
+            <p> </p>
+            <p class="descr-tit">Description: </p>
+            <p><%= trip.trip_descr %></p>
+            <div class="down">
+              <div class="amount">
+                <p>Amount of free places: <%= trip.amount %></p>
+              </div>
+                
+            <div class="price-container">
+              <span class="old-price">€ <%= trip.old_price %></span>
+              <span class="new-price">€ <%= trip.price %></span>
+            </div>
+        </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="book">
+      <button class="book-button">
+        <a href="/Book?trip=<%= trip.trip_id %>&country=<%= countryName %>" style="text-decoration: none; color: white"
+          >Book</a
+        >
+      </button>
+    </div>
+
+    <hr
+      style="
+        height: 1.5px;
+        color: #8b0000;
+        background-color: #8b0000;
+        opacity: 100%;
+        margin: 0 3rem;
+      "
+    />
+
+    <section class="reviews">
+      <h2>Reviews</h2>
+
+      <div class="reviews-button">
+        <button id="toggle-reviews-btn" class="common-reviews-btn">Show Reviews</button>
+        <button id="toggle-form-btn" class="common-reviews-btn">Add Review</button>
+      </div>
+      
+
+      <div id="review-form-container" class="review-form-container" >
+        <h3>Leave a Review</h3>
+        <div class="form-review">
+        <form
+          id="add-review-form"
+          enctype="multipart/form-data"
+        >
+          <div class="form-control">
+            <label for="descr">Your Review</label>
+            <textarea id="descr" name="descr" rows="5" required></textarea>
+          </div>
+          <div class="form-control">
+            <label for="rating">Rating (1-5)</label>
+            <input
+              type="number"
+              id="rating"
+              name="rating"
+              min="1"
+              max="5"
+              required
+            />
+          </div>
+          <div class="form-control">
+            <label for="image">Upload Image (Optional)</label>
+            <input type="file" id="image" name="image" accept="image/*" />
+          </div>
+          
+          <div class="submit-btn">
+            <button type="submit" class="btn">Submit Review</button>
+          </div>
+          
+        </form>
+      </div>
+        <p id="review-error-message" class="error-message"></p>
+        <p id="review-success-message" class="success-message" style="color: green; display: none; margin-left: 1rem;"></p>
+      </div>
+
+      <ul id="reviews-list">
+      </ul>
+
+      <div id="edit-review-form-container" style="display: none;">
+        <h3>Edit Your Review</h3>
+        <form id="edit-review-form" enctype="multipart/form-data">
+          <input type="hidden" id="edit-review-id" />
+          <div class="form-control">
+            <label for="edit-descr">Your Review</label>
+            <textarea id="edit-descr" name="edit-descr" required></textarea>
+          </div>
+          <div class="form-control">
+            <label for="edit-rating">Rating (1-5)</label>
+            <input
+              type="number"
+              id="edit-rating"
+              name="edit-rating"
+              min="1"
+              max="5"
+              required
+            />
+          </div>
+
+          <div id="current-image-container" style="margin-bottom: 1rem;"></div>
+
+        <div class="form-control">
+          <label for="edit-image">Change Image (Optional)</label>
+          <input type="file" id="edit-image" name="image" accept="image/*" />
+        </div>
+
+        <div class="form-control">
+          <label>
+            <input type="checkbox" id="delete-image-checkbox" name="deleteImage" />
+            Delete existing image
+          </label>
+        </div>
+
+          <button type="submit" class="btn">Update Review</button>
+        </form>
+      </div>
+    </section>
+
+    <%- include("../includes/confirmDialog.ejs") %>
+
+    <hr
+      style="
+        height: 1.5px;
+        color: #8b0000;
+        background-color: #8b0000;
+        opacity: 100%;
+        margin: 0 3rem;
+      "
+    />
+
+
+    </main>
+
+    <%- include("../includes/contact-option.ejs") %>
+
+    <footer><%- include("../includes/footer.ejs") %></footer>
+    <script src="/scripts/reviews.js" defer ></script>
+    <script src="/scripts/deleteButton.js" defer ></script>
+  </body>
+</html>
