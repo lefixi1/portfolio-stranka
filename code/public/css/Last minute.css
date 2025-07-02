@@ -1,0 +1,237 @@
+.destinations {
+  align-items: center;
+  padding: 20px;
+}
+
+.destinations h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 3.5rem;
+  margin-top: 2rem;
+  color: #4f1515;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+}
+
+.hotel-card {
+  display: flex;
+  background: #f5e5e5;
+  border-radius: 12px;
+  overflow: hidden;
+  width: 75rem;
+  height: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.image-container {
+  width: 40%;
+  height: auto;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.details-container {
+  width: 60%;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hotel-title {
+  font-size: 1.8rem;
+  color: #4f1515;
+  margin-bottom: 0.0025rem;
+  display: flex;
+}
+
+.location {
+  color: #4f1515c3;
+  font-style: italic;
+  margin-bottom: 0.0025rem;
+}
+
+.info p {
+  margin: 0.5rem 0;
+  color: #4f1515;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+}
+
+.bottom-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.price-container {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  font-size: 1.2rem;
+  margin-left: auto;
+}
+
+.old-price {
+  text-decoration: line-through;
+  color: #4f151580;
+}
+
+.new-price {
+  color: #4f1515;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.trip-buttons {
+  width: 20rem;
+}
+
+.common-buttons {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.admin-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.25rem;
+  gap: 6rem;
+}
+
+.common-button {
+  width: auto;
+  height: auto;
+  background-color: #7a2424;
+  color: white;
+  font-size: 1.5rem;
+  border: none;
+  padding: 0.5rem 1.2rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.common-button:hover {
+  background-color: #4f1515;
+}
+
+.update-btn,
+.delete-button {
+  background-color: #bd9f9f;
+  border: none;
+}
+
+.update-btn:hover,
+.delete-button:hover {
+  background-color: #bf8787;
+}
+
+.update-btn img,
+.delete-button img {
+  display: flex;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+}
+
+@media (max-width: 420px) {
+  .destinations {
+    padding: 0;
+  }
+
+  .destinations h2 {
+    font-size: 1.5rem;
+    margin: 0.5rem;
+    margin-top: 1.5rem;
+  }
+
+  .image-container {
+    width: 100%;
+  }
+
+  .details-container {
+    width: 100%;
+    padding: 0.75rem;
+  }
+
+  .destinations h2 {
+    margin-bottom: 2rem;
+  }
+
+  .card-container {
+    gap: 2rem;
+  }
+
+  .hotel-card {
+    width: 15rem;
+    height: auto;
+    flex-direction: column;
+  }
+
+  .hotel-card h3 {
+    font-size: 0.75rem;
+  }
+
+  .location {
+    font-size: 0.5rem;
+  }
+
+  .info p {
+    font-size: 0.5rem;
+  }
+
+  .info img {
+    width: 10px;
+    height: 10px;
+  }
+
+  .price-container {
+    font-size: 0.5rem;
+  }
+
+  .new-price {
+    font-size: 0.75rem;
+  }
+
+  .common-buttons {
+    margin-top: 0.5rem;
+    width: 68%;
+    justify-content: center;
+  }
+
+  .common-button {
+    font-size: 0.65rem;
+  }
+
+  .admin-buttons {
+    margin-top: 0.5rem;
+    gap: 1.5rem;
+    width: 68%;
+  }
+
+  .update-btn img,
+  .delete-button img {
+    width: 15px;
+    height: 15px;
+  }
+}

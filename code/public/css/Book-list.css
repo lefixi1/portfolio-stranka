@@ -1,0 +1,190 @@
+.list {
+  width: 90%;
+  margin: 20px auto;
+  padding: 20px;
+  padding-bottom: 0;
+}
+.list h2 {
+  margin: 2rem;
+  text-align: center;
+  color: #4f1515;
+  font-size: 2rem;
+}
+
+.book-list-section {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+  font-size: 1.25rem;
+  color: #4f1515;
+}
+
+.book-list-table {
+  width: 87%;
+}
+
+thead,
+tfoot {
+  background-color: #c6a0a0;
+}
+
+th {
+  color: #4f1515;
+}
+
+td {
+  color: #692a2a;
+  background-color: #ddc4c4b0;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 600;
+}
+
+th,
+td {
+  border: 1px solid #4f1515;
+  padding: 8px 10px;
+}
+
+td:last-of-type {
+  text-align: center;
+}
+
+tfoot th {
+  text-align: right;
+}
+
+tfoot td {
+  font-weight: bold;
+}
+
+.change-btns {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.change-btns img {
+  width: 20px;
+  height: 20px;
+}
+
+.formular {
+  width: 90%;
+  margin: 20px auto;
+  padding: 20px;
+  padding-bottom: 0;
+}
+.formular h2 {
+  margin: 2rem;
+  text-align: center;
+  color: #4f1515;
+}
+
+.booking-list {
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.redirect-btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.5rem;
+  background-color: #f5e5e5b6;
+  width: 9rem;
+  padding: 0.5rem;
+  padding-left: 0;
+  border-radius: 10px;
+  gap: 5px;
+}
+
+.booking-list-btn {
+  all: unset;
+  text-decoration: underline;
+  color: #8b0000;
+}
+
+.booking-list-btn img {
+  width: 25px;
+  height: 25px;
+}
+
+.form-body {
+  padding: 50px 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+form input,
+form select {
+  width: 48%;
+  margin-bottom: 10px;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  color: #4f1515;
+  background-color: #f5e5e5;
+}
+
+form input ::placeholder {
+  color: #4f1515;
+}
+.send-btn button {
+  width: 150px;
+  margin: 20px auto;
+  padding: 10px;
+  border: none;
+  background-color: #800000;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  display: block;
+}
+.send-btn button:hover {
+  background-color: #a83232;
+}
+
+@media (max-width: 420px) {
+  .list {
+    padding: 5px;
+    width: 100%;
+  }
+
+  .list h2 {
+    font-size: 1rem;
+  }
+
+  .book-list-table {
+    width: 92%;
+    margin-bottom: 0;
+  }
+
+  table {
+    font-size: 0.35rem;
+    width: 100%;
+    table-layout: fixed;
+  }
+
+  th,
+  td {
+    padding: 4px 1px;
+  }
+
+  .change-btns {
+    gap: 0.3rem;
+  }
+
+  .change-btns img {
+    width: 10px;
+    height: 10px;
+  }
+
+  .send-btn button {
+    width: 120px;
+  }
+}

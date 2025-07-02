@@ -1,0 +1,175 @@
+.add-country {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+.buto {
+  display: flex;
+  justify-content: right;
+  width: auto;
+  height: auto;
+  background-color: #ae5757bf;
+  color: white;
+  font-size: 1.5rem;
+  border: none;
+  padding: 0.5rem 1.2rem;
+  border-radius: 7px;
+  cursor: pointer;
+  transition: background 0.3s;
+  text-decoration: none;
+  margin-bottom: 1.5rem;
+}
+
+.buto:hover {
+  background-color: #864848;
+}
+
+.dest-count {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  justify-items: center;
+  align-items: center;
+}
+
+.dest-count .card img {
+  padding: 0.25rem;
+}
+
+.destinations {
+  text-align: center;
+  padding: 20px;
+}
+
+.destinations h2 {
+  font-size: 2.5rem;
+  margin: 3 1.8rem;
+  margin-top: 0.25rem;
+  margin-bottom: 1rem;
+  position: relative;
+  color: #4f1515;
+}
+
+.card {
+  background: #f3dbdb;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 55rem;
+}
+
+.card1 {
+  max-width: 43rem;
+  background: #f5e5e5;
+  font-size: 1rem;
+}
+
+.card1 img {
+  width: 100%;
+  height: 15rem;
+}
+
+.card h5 {
+  font-size: 1.5rem;
+  color: #4f1515;
+}
+
+.card p {
+  color: #4f1515c3;
+  font-size: 0.7rem;
+}
+
+.btn-opt {
+  width: 11rem;
+  max-width: 100%;
+  padding: 10px 20px;
+  font-size: 15px;
+  background-color: #7a2424;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+  text-decoration: none;
+  margin-top: 2.25rem;
+}
+
+.btn-opt:hover {
+  background-color: #4f1515;
+}
+
+.admin-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.25rem;
+}
+
+.update-btn,
+.delete-button {
+  background-color: #bd9f9f;
+  border: none;
+}
+
+.update-btn:hover,
+.delete-button:hover {
+  background-color: #bf8787;
+}
+
+.update-btn img,
+.delete-button img {
+  display: flex;
+  justify-content: center;
+  width: 27px;
+  height: 27px;
+}
+
+@media (max-width: 420px) {
+  .buto {
+    font-size: 0.65rem;
+  }
+
+  .destinations h2 {
+    margin: 1rem;
+    margin-top: 0.75rem;
+    font-size: 1.5rem;
+  }
+
+  .dest-count {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .card h5 {
+    font-size: 1.5rem;
+  }
+
+  .card {
+    margin-top: 0;
+    display: block;
+  }
+
+  .card1 {
+    width: 15rem;
+    margin: 0.3rem 0;
+    margin-bottom: 0;
+  }
+
+  .card p {
+    font-size: 0.6rem;
+  }
+
+  section.destinations button {
+    width: 5rem;
+    font-size: 7px;
+  }
+
+  .update-btn img,
+  .delete-button img {
+    width: 22px;
+    height: 22px;
+  }
+}

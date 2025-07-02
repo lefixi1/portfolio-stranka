@@ -1,0 +1,123 @@
+.formular {
+  width: 90%;
+  margin: 20px auto;
+  padding: 20px;
+  padding-bottom: 0;
+}
+.formular h2 {
+  margin: 2rem;
+  text-align: center;
+  color: #4f1515;
+  background-color: #f5e5e58f;
+  padding: 0.5rem;
+  border-radius: 10px;
+}
+
+.auth-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+.auth-section form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem;
+  margin-bottom: 0;
+  margin-top: 2rem;
+  font-size: 1rem;
+  width: 60%;
+}
+.form-body input,
+.form-body select {
+  width: 75%;
+  margin-bottom: 10px;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  color: #4f1515;
+  background-color: #f5e5e5;
+}
+
+.form-body input::placeholder {
+  color: #4f1515;
+  opacity: 0.7;
+}
+
+.send-button {
+  width: 150px;
+  margin: 20px auto;
+  padding: 10px;
+  border: none;
+  background-color: #800000;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  display: block;
+}
+.send-button:hover {
+  background-color: #a83232;
+}
+
+.redir {
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.redir-btn {
+  text-decoration: underline;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.5rem;
+  color: #8b0000;
+  background-color: #f5e5e5;
+  width: 9rem;
+  padding: 0.5rem;
+  border-radius: 10px;
+}
+
+.error-message {
+  display: flex;
+  justify-content: center;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #4f1515;
+}
+
+@media (max-width: 420px) {
+  .formular {
+    margin: 0 auto;
+  }
+
+  .form-body {
+    font-size: 0.5rem;
+    width: 75%;
+  }
+
+  .send-btn button {
+    font-size: 0.75rem;
+    width: 80px;
+  }
+
+  .form-body input,
+  .form-body select {
+    width: 65%;
+    font-size: 0.85rem;
+  }
+}

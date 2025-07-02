@@ -1,0 +1,145 @@
+.contacts {
+  width: 90%;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+.contacts h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin: 2rem;
+  color: #4f1515;
+}
+.schedule {
+  display: flex;
+  justify-content: center;
+  gap: 10rem;
+}
+
+.schedule p {
+  font-size: 1.5rem;
+  text-align: center;
+  color: #4f1515;
+}
+table {
+  width: 30rem;
+  border-collapse: collapse;
+  color: #4f1515;
+  margin: 2rem;
+  font-size: 1rem;
+}
+table td {
+  padding: 8px 10px;
+  border-bottom: 1px solid #aa5c5c;
+}
+.map iframe {
+  width: 100%;
+  max-width: 400px;
+  height: 300px;
+  border: 0;
+  display: block;
+  margin: 5rem auto;
+}
+.contacts-container {
+  display: flex;
+  justify-content: space-around;
+  background: #df9e9ec3;
+  margin-top: 4rem;
+  text-align: center;
+  height: 10rem;
+  padding: 1rem;
+  gap: 35rem;
+  margin: 0 5rem;
+  font-size: 2rem;
+}
+
+.contacts-container h3,
+.contacts-container h4 {
+  color: #4f1515;
+}
+
+.mail-phone h3 {
+  font-size: 2rem;
+}
+
+.mail-phone h4 {
+  font-size: 1.5rem;
+}
+
+.mail,
+.phone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 0;
+  font-size: 1rem;
+}
+
+.mail img,
+.phone img {
+  width: 25px;
+  margin-right: 10px;
+}
+
+.socials img {
+  width: 40px;
+  margin: 12px 10px;
+}
+
+@media (max-width: 420px) {
+  .contacts h2 {
+    font-size: 1.5rem;
+  }
+
+  .schedule {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .schedule p {
+    font-size: 0.75rem;
+  }
+
+  table {
+    width: 10rem;
+    font-size: 0.5rem;
+    margin: 0 5.5rem;
+  }
+
+  .map iframe {
+    margin: 1rem auto;
+  }
+
+  .contacts-container {
+    margin: 0 1rem;
+    gap: 1rem;
+    height: auto;
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    margin: 0 0;
+  }
+
+  .mail-phone h3 {
+    font-size: 0.5rem;
+  }
+
+  .mail-phone h4 {
+    font-size: 0.25rem;
+  }
+
+  .mail,
+  .phone {
+    margin: 2px 0;
+  }
+
+  .mail img,
+  .phone img {
+    width: 8px;
+  }
+
+  .socials img {
+    width: 15px;
+    height: 15px;
+    margin: 0;
+  }
+}

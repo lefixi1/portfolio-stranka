@@ -1,0 +1,277 @@
+.list {
+  padding: 30px;
+}
+
+.list h1 {
+  font-size: 2rem;
+  color: #4f1515;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+  text-decoration: underline;
+}
+
+.users-list-section {
+  display: flex;
+  justify-content: center;
+}
+
+table {
+  border-collapse: collapse;
+  border: 2px solid #4f1515;
+  font-family: sans-serif;
+  font-size: 1.25rem;
+  letter-spacing: 1px;
+  width: 80%;
+}
+
+caption {
+  caption-side: bottom;
+  padding: 10px;
+  font-weight: bolder;
+}
+
+thead,
+tfoot {
+  background-color: #c6a0a0;
+  text-decoration: underline #4f1515;
+}
+
+th {
+  color: #4f1515;
+}
+
+td {
+  color: #692a2a;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 600;
+}
+
+th,
+td {
+  border: 1px solid #4f1515;
+  padding: 8px 10px;
+}
+
+td:last-of-type {
+  text-align: center;
+}
+
+tfoot th {
+  text-align: right;
+}
+
+tfoot td {
+  font-weight: bold;
+}
+
+.divButton img {
+  width: 13px;
+  height: 13px;
+}
+
+.trip-list {
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.redirect-btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.5rem;
+  background-color: #f5e5e5b6;
+  width: 9rem;
+  padding: 0.5rem;
+  padding-left: 0;
+  border-radius: 10px;
+  gap: 5px;
+}
+
+.trip-list-btn {
+  all: unset;
+  text-decoration: underline;
+  color: #8b0000;
+}
+
+.trip-list-btn img {
+  width: 25px;
+  height: 25px;
+}
+
+.formular {
+  padding: 20px;
+}
+.formular h2 {
+  margin: 2rem;
+  text-align: center;
+  color: #4f1515;
+}
+
+.user-list {
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.redirect-btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.5rem;
+  background-color: #f5e5e5b6;
+  width: 9rem;
+  padding: 0.5rem;
+  padding-left: 0;
+  border-radius: 10px;
+  gap: 5px;
+}
+
+.user-list-btn {
+  all: unset;
+  text-decoration: underline;
+  color: #8b0000;
+}
+
+.user-list-btn img {
+  width: 25px;
+  height: 25px;
+}
+
+.form-body {
+  padding: 50px 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+input,
+select {
+  width: 48%;
+  margin-bottom: 10px;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  color: #4f1515;
+  background-color: #f5e5e5;
+}
+
+input::placeholder {
+  color: #692a2a;
+  opacity: 0.7;
+}
+
+input[type="file"]::file-selector-button {
+  background-color: #692a2a9b;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+input[type="file"]::file-selector-button:hover {
+  background-color: #864848;
+}
+
+.form-btn {
+  display: flex;
+  justify-content: center;
+}
+
+.send-button {
+  background-color: #7a2424;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 3px 25px;
+  font-size: 1.35rem;
+}
+
+.goBack {
+  display: flex;
+  justify-content: right;
+  width: auto;
+  height: auto;
+  background-color: #c6a0a0;
+  color: white;
+  font-size: 1rem;
+  border: none;
+  padding: 0.5rem 1.2rem;
+  border-radius: 7px;
+  cursor: pointer;
+  transition: background 0.3s;
+  text-decoration: none;
+  margin: 1rem 0;
+}
+
+.send-button:hover {
+  background-color: #4f1515;
+}
+
+label {
+  font-weight: bold;
+  color: #4f1515;
+}
+
+.error-message {
+  display: flex;
+  justify-content: center;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #4f1515;
+}
+
+.countries {
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.redirect-btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.5rem;
+  background-color: #f5e5e5b6;
+  width: 9rem;
+  padding: 0.5rem;
+  padding-left: 0;
+  border-radius: 10px;
+  gap: 5px;
+}
+
+.countries-btn {
+  text-decoration: underline;
+  color: #8b0000;
+}
+
+.countries-btn img {
+  width: 25px;
+  height: 25px;
+}
+
+@media (max-width: 420px) {
+  .list {
+    padding: 5px;
+  }
+
+  .list h1 {
+    font-size: 1.5rem;
+    margin-bottom: 0;
+  }
+
+  table {
+    font-size: 0.65rem;
+  }
+
+  .form-body {
+    padding: 30px 2px;
+  }
+}

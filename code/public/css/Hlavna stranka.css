@@ -1,0 +1,349 @@
+.features h2 {
+  font-size: 2.5rem;
+  margin: 2rem 1.8rem;
+  position: relative;
+  color: #4f1515;
+}
+
+.features {
+  text-align: center;
+  padding: 1rem;
+  margin: 1.8rem;
+  font-size: 0.9rem;
+}
+
+.features h3 {
+  font-size: 1.4rem;
+}
+
+.features-container {
+  display: flex;
+  justify-content: center;
+  gap: 1.7rem;
+}
+
+.feature {
+  padding: 15px;
+  border-radius: 8px;
+  width: 100%;
+  margin: 2rem 4rem 2rem;
+}
+
+.feature img {
+  width: 4rem;
+  height: 4rem;
+}
+
+.destinations {
+  text-align: center;
+  padding: 20px;
+}
+
+.destinations h2 {
+  font-size: 2.5rem;
+  margin: 3 1.8rem;
+  margin-top: 0.25rem;
+  margin-bottom: 3rem;
+  position: relative;
+  color: #4f1515;
+}
+
+.destination-cards-upper {
+  margin: 0;
+  display: flex;
+  gap: 2.5rem;
+  justify-content: center;
+  text-align: left;
+}
+
+.destination-cards-lower {
+  margin: 0;
+  display: flex;
+  gap: 2.5rem;
+  justify-content: center;
+  text-align: left;
+}
+
+.card {
+  background: #f3dbdb;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 55rem;
+}
+
+.card1 {
+  max-width: 47rem;
+  background: #f5e5e5;
+  font-size: 1rem;
+}
+
+.card2 {
+  max-width: 34rem;
+  background: #f5e5e5;
+  font-size: 1rem;
+}
+
+.card3 {
+  max-width: 34rem;
+  background: #f5e5e5;
+  font-size: 1rem;
+}
+
+.card4 {
+  max-width: 47rem;
+  background: #f5e5e5;
+  font-size: 1rem;
+}
+
+.card1 img {
+  width: 100%;
+  height: 13rem;
+}
+
+.card2 img {
+  width: 100%;
+  height: 13rem;
+}
+
+.card3 img {
+  width: 100%;
+  height: 13rem;
+}
+
+.card4 img {
+  width: 100%;
+  height: 13rem;
+}
+
+.card h5 {
+  color: #4f1515;
+}
+
+.card p {
+  color: #4f1515c3;
+  font-size: 0.7rem;
+}
+
+section.destinations .btn-opt {
+  width: 11rem;
+  max-width: 100%;
+  padding: 10px 20px;
+  font-size: 12px;
+  background-color: #7a2424;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+  text-decoration: none;
+}
+
+section.destinations .btn-opt:hover {
+  background-color: #4f1515;
+}
+
+.faq {
+  width: 85%;
+  margin: 1.8rem;
+  margin-top: 0.5rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  transform: translateX(6%);
+}
+
+.btn {
+  background-color: #6b3131;
+  color: #fff;
+  width: 9rem;
+}
+
+.btn:hover {
+  background-color: #4f1515;
+  color: #fff;
+}
+
+.faq .faq-accordion {
+  display: block;
+  justify-content: center;
+}
+
+.faq h2 {
+  font-size: 2.5rem;
+  margin: 2rem;
+}
+
+.faq-accordion {
+  background-color: white;
+  border-radius: 0.5rem;
+  width: 100%;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.accordion-item {
+  margin-bottom: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: white;
+  box-shadow: #333;
+}
+
+.accordion-button {
+  width: 100%;
+  padding: 1rem;
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 500;
+  color: #4f1516;
+}
+
+.accordion-button:hover {
+  background-color: #f8f8f8;
+}
+
+.question-text {
+  font-size: 1.2rem;
+  font-weight: bolder;
+  color: #4f1516;
+}
+
+.accordion-icon {
+  transition: transform 0.3s ease;
+  margin-left: 1rem;
+  color: #4f1516;
+}
+
+.accordion-button.active .accordion-icon {
+  transform: rotate(180deg);
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+  color: #4f1516;
+}
+
+.accordion-content.show {
+  max-height: 500px;
+}
+
+.accordion-body {
+  padding: 1rem;
+  margin-top: 1rem;
+  border-top: 1px solid #ddd;
+  color: #662828;
+}
+
+@media (max-width: 420px) {
+  .features h2 {
+    font-size: 1.5rem;
+    margin: 0.5rem;
+    margin-top: 1.5rem;
+  }
+
+  .features {
+    margin: 2rem;
+    padding: 0;
+    font-size: 0.75rem;
+  }
+
+  .features-container {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .features h3 {
+    font-size: 1rem;
+  }
+
+  .feature {
+    padding: 0;
+    margin: 0.5rem 0.2rem 0.5rem;
+  }
+
+  .feature img {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .destinations h2 {
+    margin: 1rem;
+    margin-top: 0.75rem;
+    font-size: 1.5rem;
+  }
+
+  .destination-cards-upper {
+    flex-direction: column;
+    margin: 0 4.4rem;
+    gap: 0;
+  }
+
+  .destination-cards-lower {
+    flex-direction: column;
+    margin: 0 4.4rem;
+    gap: 0;
+  }
+
+  .card {
+    margin-top: 0;
+    display: block;
+  }
+
+  .card1,
+  .card2,
+  .card3,
+  .card4 {
+    width: 15rem;
+    margin: 0.3rem 0;
+    margin-bottom: 0;
+  }
+
+  .card p {
+    font-size: 0.5rem;
+  }
+
+  .destinations .btn {
+    width: 9rem;
+    font-size: 1rem;
+    margin: 0.75rem 0;
+  }
+
+  .faq {
+    width: 65%;
+    transform: translateX(16%);
+    margin-top: 0;
+  }
+
+  .faq h2 {
+    font-size: 1.5rem;
+  }
+
+  .accordion-header {
+    font-size: 1rem;
+  }
+
+  .contact-form h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .accordion-button {
+    font-size: 1rem;
+  }
+
+  .question-text {
+    font-size: 1rem;
+  }
+
+  .accordion-body {
+    font-size: 0.75rem;
+  }
+}
