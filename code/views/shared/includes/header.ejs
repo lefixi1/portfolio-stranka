@@ -1,0 +1,56 @@
+<div class="header-container">
+  <div class="logo">
+    <a href="/"><img src="/icons/Logo WEBY.png" /></a>
+  </div>
+  <nav class="navbar">
+    <ul class="nav-menu">
+      <% if(locals.isAdmin) { %>
+      <li class="nav-item">
+        <a href="/admin/users-list">Portal users</a>
+      </li>
+      <% } %>
+      <li><a href="/">Main</a></li>
+      <% if(locals.isAuth) {%>
+
+      <li><a href="/Last_minute">Last minute</a></li>
+      <li class="dropdown">
+        <a id="dropdownButton" class="dropdown-button" href="#"
+          >Countries <span id="arrow" class="arrow">▼</span></a
+        >
+        <ul
+          id="dropdownMenu"
+          class="dropdown-menu"
+          style="background-color: #4f1515; opacity: 95%"
+        >
+          <% if (typeof countries !== 'undefined' && countries.length > 0) { %>
+          <% for (const c of countries) { %>
+          <li>
+            <a href="/Countries/<%= c.count_name %>"><%= c.count_name %></a>
+          </li>
+          <% } %> <% } else { %>
+          <li>No countries available</li>
+          <% } %>
+        </ul>
+      </li>
+      <li><a href="/Book">Book</a></li>
+      <% } %>
+      <li><a href="/Contacts">Contacts</a></li>
+      <% if(!locals.isAuth) {%>
+      <li><a href="/Sign-up">SignUp</a></li>
+      <li><a href="/Login">Login</a></li>
+      <% } else {%>
+      <li>
+        <form id="clear-form" action="/logout" method="post">
+          <button class="logout">LogOut</button>
+        </form>
+      </li>
+      <% } %>
+    </ul>
+
+    <div class="hamburger">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+  </nav>
+</div>
