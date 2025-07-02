@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include("../includes/head.ejs") %>
+    <title>Edit booking</title>
+    <link rel="stylesheet" href="/css/Book-list.css" />
+  </head>
+  <body>
+    <header><%- include("../includes/header.ejs") %></header>
+
+    <main>
+    <section class="formular">
+      <hr
+        style="
+          height: 1.5px;
+          color: #8b0000;
+          background-color: #8b0000;
+          opacity: 100%;
+          margin: 0 3rem;
+        "
+      />
+      <h2>Edit booking</h2>
+      <hr
+        style="
+          height: 1.5px;
+          color: #8b0000;
+          background-color: #8b0000;
+          opacity: 100%;
+          margin: 0 3rem;
+        "
+      />
+      <div class="booking-list">
+        <div class="redirect-btns">
+          <button class="booking-list-btn" type="button" onclick="history.back()">
+            <img src="/icons/redirect-btn.png" alt="redirect"> Booking list
+          </button>
+          
+        </div>
+        
+      </div>
+      <form action="/Book/<%= booking.book_id %>/edit" method="post">
+        <% if(inputData.errorMessage){ %>
+        <p class="error-message"><%= inputData.errorMessage %></p>
+        <% } %>
+        <div class="form-body">
+          <select name="country" id="country" required>
+            <option value="">Choose country</option>
+            <% for(const c of countries){ %>  
+                <option value="<%= c.count_id %>" <%= parseInt(inputData.country) == c.count_id ? 'selected' : '' %>>
+                    <%= c.count_name %>
+                </option>
+            <% } %>
+        </select>
+        <select name="trip" id="trip" required data-original-trip-id="<%= booking.trip_id %>"> 
+          <option value="">Choose trip</option>
+          <% for(const t of trips){ %>
+          <option value="<%= t.trip_id %>" <%= inputData.trip == t.trip_id ? 'selected' : '' %>>
+              <%= t.trip_tit %>
+          </option>
+          <% } %>
+        </select>
+          <input
+            type="number"
+            placeholder="Amount of people"
+            min="1"
+            max="20"
+            name="amountP"
+            id="amountP"
+            value="<%= inputData.ppl_amount %>"
+            required
+          />
+          <input type="hidden" name="bookId" value="<%= booking.book_id %>">
+        </div>
+        <div class="send-btn">
+          <button
+            class="send-button"
+            type="submit"
+            style="border-radius: 0.25rem"
+          >
+            Update booking
+          </button>
+        </div>
+      </form>
+
+      <hr
+        style="
+          height: 1.5px;
+          color: #8b0000;
+          background-color: #8b0000;
+          opacity: 100%;
+          margin: 0 3rem;
+        "
+      />
+    </section>
+
+    </main>
+
+    <%- include("../includes/contact-option.ejs") %>
+
+    <footer><%- include("../includes/footer.ejs") %></footer>
+    <script src="/scripts/book.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include("../includes/head.ejs") %>
+    <title>Book</title>
+    <link rel="stylesheet" href="css/Book.css" />
+  </head>
+  <body>
+    <header><%- include("../includes/header.ejs") %></header>
+
+    <main>
+    <section class="formular">
+      <hr
+        style="
+          height: 1.5px;
+          color: #8b0000;
+          background-color: #8b0000;
+          opacity: 100%;
+          margin: 0 3rem;
+        "
+      />
+      <h2>Book form</h2>
+      <hr
+        style="
+          height: 1.5px;
+          color: #8b0000;
+          background-color: #8b0000;
+          opacity: 100%;
+          margin: 0 3rem;
+        "
+      />
+      <div class="booking-list">
+        <a href="/Book/Book_list" class="booking-list-btn">Booking list</a>
+      </div>
+      <form action="/Book" method="post">
+        <% if(inputData.errorMessage){ %>
+        <p class="error-message"><% inputData.errorMessage %></p>
+        <% } %>
+        <div class="form-body">
+          <input
+            type="text"
+            name="namein"
+            id="namein"
+            placeholder="Name"
+            value="<%= inputData.namein %>"
+            required
+          />
+          <input
+            type="text"
+            name="surnamein"
+            id="surnamein"
+            placeholder="Surname"
+            value="<%= inputData.surnamein %>"
+            required
+          />
+          <input type="tel" name="telin" id="telin" placeholder="Phone" value="<%= inputData.telin %>"/>
+          <input
+            type="email"
+            name="mailin"
+            id="mailin"
+            placeholder="Email"
+            value="<%= inputData.mailin %>"
+            required
+          />
+          <input
+            type="text"
+            name="countin"
+            id="countin"
+            placeholder="Your country"
+            value="<%= inputData.countin %>"
+            required
+          />
+          <input
+            type="text"
+            name="cityin"
+            id="cityin"
+            value="<%= inputData.cityin %>"
+            placeholder="Your city"
+          />
+          <select name="country" id="country" required>
+            <option value="" disabled <%= !selectedCountry ? "selected" : "" %>>Choose country</option>
+            <% for(const c of countries){ %>
+              <option value="<%= c.count_id %>" 
+                <%= String(c.count_id) === String(selectedCountry) ? "selected" : "" %>>
+                <%= c.count_name %>
+              </option>
+            <% } %>
+          </select>
+          <select name="trip" id="trip" required data-original-trip-id="<%= selectedTrip || "" %>">
+            <% if (!selectedCountry) { %>
+              <option disabled selected>First choose the country</option>
+            <% } else { %>
+              <option value="" disabled <%= !selectedTrip ? "selected" : "" %>>Choose trip</option>
+            <% } %>
+            <% for(const t of trips){ %>
+              <option value="<%= t.trip_id %>" <%= String(t.trip_id) === String(selectedTrip) ? "selected" : "" %>>
+                <%= t.trip_tit %>
+              </option>
+            <% } %>
+          </select>
+          <input
+            type="number"
+            placeholder="Amount of people"
+            min="1"
+            max="20"
+            name="amountP"
+            id="amountP"
+            value="<%= inputData.amountP %>"
+            required
+          />
+        </div>
+        <div class="send-btn">
+          <button
+            class="send-button"
+            type="submit"
+            style="border-radius: 0.25rem"
+          >
+            Send
+          </button>
+        </div>
+      </form>
+
+      <hr
+        style="
+          height: 1.5px;
+          color: #8b0000;
+          background-color: #8b0000;
+          opacity: 100%;
+          margin: 0 3rem;
+        "
+      />
+    </section>
+
+    </main>
+
+    <%- include("../includes/contact-option.ejs") %>
+
+    <footer><%- include("../includes/footer.ejs") %></footer>
+    <script src="/scripts/book.js" defer></script>
+  </body>
+</html>
