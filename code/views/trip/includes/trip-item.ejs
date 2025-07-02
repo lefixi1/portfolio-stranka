@@ -1,0 +1,70 @@
+<div class="hotel-card">
+  <div class="image-container">
+    <img src="/images/<%= t.imageLocation %>" alt="Hotel Image" />
+  </div>
+  <div class="details-container">
+    <h3><%= t.trip_tit %></h3>
+    <p class="location">In <%= t.city %></p>
+    <div class="info">
+      <p>
+        <img
+          src="/icons/icon calendar.png"
+          alt="Calendar"
+          width="20"
+          height="20"
+        />
+        <%= t.humanReadableDateDep %> - <%= t.humanReadableDateRet %>
+      </p>
+      <p>
+        <img src="/icons/icon bed.png" alt="Hotel" width="20" height="20" />
+        <%= t.room_type %>
+      </p>
+      <p>
+        <img src="/icons/icon fork.png" alt="Meal" width="20" height="20" />
+        <%= t.trip_type %>
+      </p>
+    </div>
+    <div class="price-container">
+      <span class="old-price">€ <%= t.old_price %></span>
+      <span class="new-price">€ <%= t.price %></span>
+    </div>
+    <div class="trip-buttons">
+      <div class="common-buttons">
+        <a
+          href="/Countries/<%= t.count_name %>/<%= t.trip_id %>"
+          class="common-button"
+          style="text-decoration: none; color: white"
+          >Show details</a
+        >
+        <a
+          href="/Book?country=<%= encodeURIComponent(t.count_name) %>&trip=<%= encodeURIComponent(t.trip_id) %>"
+          class="common-button"
+          style="text-decoration: none; color: white"
+          >Book</a
+        >
+      </div>
+
+      <div class="admin-buttons">
+        <% if(locals.isAdmin) { %>
+        <a
+          href="/admin/Countries/<%= t.count_name  %>/<%= t.trip_id %>/edit"
+          class="update-btn"
+          style="text-decoration: none; color: white"
+          ><img src="/icons/edit icon.png" alt="edit"
+        /></a>
+        <a
+          href="#"
+          class="delete-button"
+          data-type="trip"
+          data-countryname="<%= t.count_name %>"
+          data-tripid="<%= t.trip_id %>"
+          data-triptit="<%= t.trip_tit %>"
+          style="text-decoration: none; color: white"
+        >
+          <img src="/icons/delete icon.png" alt="delete" />
+        </a>
+        <% } %>
+      </div>
+    </div>
+  </div>
+</div>
