@@ -8,14 +8,14 @@ V projekte som sa zoznámila aj so základmi **AJAX** (fetch API), ktoré som po
 
 ---
 
-## 🔧Použité technológie
+## 🔧 Použité technológie
 
 - HTML5, CSS3, JavaScript
 - Node.js + Express
 - Nodemon
 - AJAX
 - MySql
-- Základny UI dizajn 🖌️[Figma](https://www.figma.com/design/Wt3GqrzMAehNXkktx8ulOl/Web-design1?node-id=0-1&t=AAje1raBkhG8gEu0-1)
+- Základný UI dizajn 🖌️[Figma](https://www.figma.com/design/Wt3GqrzMAehNXkktx8ulOl/Web-design1?node-id=0-1&t=AAje1raBkhG8gEu0-1)
 
 ---
 
@@ -35,7 +35,6 @@ V projekte som sa zoznámila aj so základmi **AJAX** (fetch API), ktoré som po
 ├── `views/` _- Šablóny stránok pre renderovanie na strane servera_<br/>
 ├── `app.js` _- Hlavný vstupný bod aplikácie (inicializuje server a middleware)_<br/>
 ├── `package.json` _- Zoznam použitých knižníc, skriptov a metaúdajov projektu_<br/>
-├── `package-lock.json` _- Automaticky generovaný súbor pre verzie závislostí_<br/>
 
 ---
 
