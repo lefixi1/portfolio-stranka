@@ -63,6 +63,6 @@ V prípade záujmu o spoluprácu alebo doplňujúce informácie ma môžete kont
 
 ---
 
-## 🇬🇧English version
+## 🇬🇧 English version
 
 ---
