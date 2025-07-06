@@ -1,4 +1,8 @@
-# ✈️ Môj webový projekt - **Cestovná kancelária - Fligh**
+# ✈️ Fullstack Web Project - **Travel agency - Fligh**
+
+*```(English version bellow)```*
+
+---
 
 Projekt vznikol ako **semestrálna práca** v rámci štúdia na Žilinskej univerzite na odbore Multimediálne technológie. <br/>
 Cieľom bolo vytvoriť **kompletnú webovú aplikáciu** s návrhom vlastnéhp dizajnu, interaktívneho front-endu a serverovou logikou pomocou **Node.js**. <br/>
@@ -13,7 +17,7 @@ V projekte som sa zoznámila aj so základmi **AJAX** (fetch API), ktoré som po
 - Nodemon
 - AJAX
 - MySql
-- UI dizajn 🖌️[Figma](https://www.figma.com/design/Wt3GqrzMAehNXkktx8ulOl/Web-design1?node-id=0-1&t=AAje1raBkhG8gEu0-1)
+- Základny UI dizajn 🖌️[Figma](https://www.figma.com/design/Wt3GqrzMAehNXkktx8ulOl/Web-design1?node-id=0-1&t=AAje1raBkhG8gEu0-1)
 
 ---
 
@@ -56,3 +60,9 @@ V prípade záujmu o spoluprácu alebo doplňujúce informácie ma môžete kont
 - **E-mail:** [batalovaolesia523@gmail.com](mailto:batalovaolesia523@gmail.com)
 - **LinkedIn:** [linkedin.com/in/olesia-batalova](https://www.linkedin.com/in/olesia-batalova)
 - **GitHub:** [github.com/lefixi1](https://github.com/lefixi1)
+
+---
+
+## GB-eng English version
+
+---
