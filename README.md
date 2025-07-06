@@ -1,7 +1,5 @@
 # ✈️ Fullstack Web Project - **Travel agency - Fligh**
 
-*```(English version bellow)```*
-
 ---
 
 Projekt vznikol ako **semestrálna práca** v rámci štúdia na Žilinskej univerzite na odbore Multimediálne technológie. <br/>
@@ -60,9 +58,5 @@ V prípade záujmu o spoluprácu alebo doplňujúce informácie ma môžete kont
 - **E-mail:** [batalovaolesia523@gmail.com](mailto:batalovaolesia523@gmail.com)
 - **LinkedIn:** [linkedin.com/in/olesia-batalova](https://www.linkedin.com/in/olesia-batalova)
 - **GitHub:** [github.com/lefixi1](https://github.com/lefixi1)
-
----
-
-## 🇬🇧 English version
 
 ---
