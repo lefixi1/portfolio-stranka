@@ -11,6 +11,7 @@ V projekte som sa zoznámila aj so základmi **AJAX** (fetch API), ktoré som po
 ## 🔧 Použité technológie
 
 - HTML5, CSS3, JavaScript
+- EJS
 - Node.js + Express
 - Nodemon
 - AJAX
